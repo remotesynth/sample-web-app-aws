@@ -17,6 +17,7 @@ jobs:
           state-action: start
           install-awslocal: 'true'
           preview-cmd: |
+            npm install -g aws-cdk-local aws-cdk;
             awslocal bootstrap
             awslocal deploy
             echo LS_PREVIEW_URL=$AWS_ENDPOINT_URL/cloudfront/$distributionId/ >> $GITHUB_ENV;
