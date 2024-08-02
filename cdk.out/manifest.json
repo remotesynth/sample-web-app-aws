@@ -1,0 +1,251 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "DynamoDBStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "DynamoDBStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "DynamoDBStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "DynamoDBStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/59419271e9748669b9ee7337ecbea625eb040898f68177aa55f4be4d525b1af0.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "DynamoDBStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "DynamoDBStack.assets"
+      ],
+      "metadata": {
+        "/DynamoDBStack/MyWebAppBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyWebAppBucketB9F20F45"
+          }
+        ],
+        "/DynamoDBStack/MyWebAppBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyWebAppBucketPolicyB1980AA6"
+          }
+        ],
+        "/DynamoDBStack/OAI/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OAIE1EFC67F"
+          }
+        ],
+        "/DynamoDBStack/BackendCF/CFDistribution": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BackendCFCFDistribution7FE8ADFE"
+          }
+        ],
+        "/DynamoDBStack/MyTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyTable794EDED1"
+          }
+        ],
+        "/DynamoDBStack/initTable/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "initTableC7228C47"
+          }
+        ],
+        "/DynamoDBStack/initTable/CustomResourcePolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "initTableCustomResourcePolicy178CB385"
+          }
+        ],
+        "/DynamoDBStack/LatestNodeRuntimeMap": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LatestNodeRuntimeMap"
+          }
+        ],
+        "/DynamoDBStack/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+          }
+        ],
+        "/DynamoDBStack/AWS679f53fac002430cb0da5b7982bd2287/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWS679f53fac002430cb0da5b7982bd22872D164C4C"
+          }
+        ],
+        "/DynamoDBStack/HelloWorldFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldFunctionServiceRole8E0BD458"
+          }
+        ],
+        "/DynamoDBStack/HelloWorldFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldFunctionServiceRoleDefaultPolicy6CCD7798"
+          }
+        ],
+        "/DynamoDBStack/HelloWorldFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldFunctionB2AB6E79"
+          }
+        ],
+        "/DynamoDBStack/HelloWorldApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldApi9E278160"
+          }
+        ],
+        "/DynamoDBStack/HelloWorldApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldApiDeployment65F822B562acb7636475a4317f8e9a8afc4dfef3"
+          }
+        ],
+        "/DynamoDBStack/HelloWorldApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldApiDeploymentStageprod2E271AE0"
+          }
+        ],
+        "/DynamoDBStack/HelloWorldApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldApiEndpointAD496187"
+          }
+        ],
+        "/DynamoDBStack/HelloWorldApi/Default/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldApiOPTIONS74DF959A"
+          }
+        ],
+        "/DynamoDBStack/HelloWorldApi/Default/hello/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldApihello69E87CE7"
+          }
+        ],
+        "/DynamoDBStack/HelloWorldApi/Default/hello/OPTIONS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldApihelloOPTIONSFF7846F4"
+          }
+        ],
+        "/DynamoDBStack/HelloWorldApi/Default/hello/GET/ApiPermission.DynamoDBStackHelloWorldApiDC6026DA.GET..hello": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldApihelloGETApiPermissionDynamoDBStackHelloWorldApiDC6026DAGEThello0AE9EC0F"
+          }
+        ],
+        "/DynamoDBStack/HelloWorldApi/Default/hello/GET/ApiPermission.Test.DynamoDBStackHelloWorldApiDC6026DA.GET..hello": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldApihelloGETApiPermissionTestDynamoDBStackHelloWorldApiDC6026DAGEThelloBC6756F1"
+          }
+        ],
+        "/DynamoDBStack/HelloWorldApi/Default/hello/GET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldApihelloGET9D1EC06B"
+          }
+        ],
+        "/DynamoDBStack/Deployment/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeploymentAwsCliLayerB82B26A3"
+          }
+        ],
+        "/DynamoDBStack/Deployment/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeploymentCustomResource47E8B2E6"
+          }
+        ],
+        "/DynamoDBStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+          }
+        ],
+        "/DynamoDBStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF"
+          }
+        ],
+        "/DynamoDBStack/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536"
+          }
+        ],
+        "/DynamoDBStack/CloudFrontDistributionURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CloudFrontDistributionURL"
+          }
+        ],
+        "/DynamoDBStack/APIGatewayURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayURL"
+          }
+        ],
+        "/DynamoDBStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/DynamoDBStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/DynamoDBStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/DynamoDBStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "DynamoDBStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
