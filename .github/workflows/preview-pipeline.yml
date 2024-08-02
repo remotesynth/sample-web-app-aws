@@ -15,6 +15,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           state-backend: ephemeral
           state-action: start
+          include-preview: 'true'
           install-awslocal: 'true'
           preview-cmd: |
             npm install -g aws-cdk-local aws-cdk;
