@@ -18,6 +18,8 @@ jobs:
           include-preview: 'true'
           install-awslocal: 'true'
           preview-cmd: |
+            echo ls
+            cd ../
             npm install -g aws-cdk-local aws-cdk;
             cdklocal bootstrap;
             cdklocal deploy;
