@@ -1,4 +1,4 @@
-name: 'Creat Preview on Push'
+name: 'Create Preview on Push'
 on:
   workflow_dispatch:
   push:
@@ -9,6 +9,8 @@ jobs:
     name: Setup LocalStack Preview
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: LocalStack Preview
         uses: LocalStack/setup-localstack@v0.2.2
         with:
