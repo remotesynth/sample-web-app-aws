@@ -94,7 +94,7 @@ export class DynamoDBStack extends cdk.Stack {
 
     new S3Deployment.BucketDeployment(this, "Deployment", {
       sources: [
-        S3Deployment.Source.asset(path.join(__dirname, '../../site_assets')),
+        S3Deployment.Source.asset(path.join(__dirname, '../site_assets')),
         S3Deployment.Source.jsonData("config.json", { api_url: api.url }),],
       destinationBucket: bucket,
     });
