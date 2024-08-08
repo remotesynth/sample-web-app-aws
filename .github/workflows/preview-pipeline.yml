@@ -9,6 +9,7 @@ on:
 
 jobs:
   localstack:
+    permissions: write-all
     name: Setup LocalStack Preview
     runs-on: ubuntu-latest
     steps:
