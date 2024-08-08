@@ -18,7 +18,11 @@ fetch('./config.json')
   });
 
 function loadAPIURL(url) {
-  console.log(`loading the API URL: ${url}`);
+  let fixed = url;
+  if (url.charAt(0) === '/') {
+    fixed = window.location.origin + url;
+  }
+  console.log(`loading the API URL: ${url}hello`);
   fetch(url + 'hello')
     .then(async (response) => {
       const res = await response.json();

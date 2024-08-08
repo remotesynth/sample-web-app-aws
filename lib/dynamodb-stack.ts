@@ -95,7 +95,7 @@ export class DynamoDBStack extends cdk.Stack {
     let api_url = api.url;
     const localenv = this.node.tryGetContext('localenv');
     if (localenv === 'ephemeral') {
-      api_url = `http://localhost:4566/restapis/${api.restApiId}/prod/_user_request_/`
+      api_url = `/restapis/${api.restApiId}/prod/_user_request_/`
     }
 
     new S3Deployment.BucketDeployment(this, "Deployment", {
