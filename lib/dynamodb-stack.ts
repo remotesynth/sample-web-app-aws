@@ -92,10 +92,16 @@ export class DynamoDBStack extends cdk.Stack {
     const helloIntegration = new apigateway.LambdaIntegration(lambdaFunction);
     helloResource.addMethod('GET', helloIntegration);
 
+    let api_url = api.url;
+    const localenv = this.node.tryGetContext('localenv');
+    if (localenv === 'ephemeral') {
+      api_url = `http://localhost:4566/restapis/${api.restApiId}/prod/_user_request_/`
+    }
+
     new S3Deployment.BucketDeployment(this, "Deployment", {
       sources: [
         S3Deployment.Source.asset(path.join(__dirname, '../site_assets')),
-        S3Deployment.Source.jsonData("config.json", { api_url: api.url }),],
+        S3Deployment.Source.jsonData("config.json", { api_url: api_url }),],
       destinationBucket: bucket,
     });
 
