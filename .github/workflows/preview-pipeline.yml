@@ -27,7 +27,7 @@ jobs:
             npm install -g aws-cdk-local aws-cdk;
             npm install;
             cdklocal bootstrap --context localenv=ephemeral;
-            cdklocal deploy localenv=ephemeral --require-approval never;
+            cdklocal deploy --context localenv=ephemeral --require-approval never;
             distributionId=$(awslocal cloudfront list-distributions | jq -r '.DistributionList.Items[0].Id');
             echo LS_PREVIEW_URL=$AWS_ENDPOINT_URL/cloudfront/$distributionId/ >> $GITHUB_ENV;
         env:
