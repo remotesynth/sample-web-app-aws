@@ -28,7 +28,7 @@ function loadAPIURL(url) {
       const res = await response.json();
       console.log('Success:', res);
       if (res.message) {
-        returnMessage(url, res.message);
+        returnMessage(fixed, res.message);
       }
     })
     .catch((error) => {
